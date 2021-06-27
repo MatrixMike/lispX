@@ -1,5 +1,5 @@
 (assoc 'B '((A . 1)(B . 2) (C . 3)))
-(setq A '(A (LIST) (WITH SUBLISTS)))
+(setq A '(A (LIST) (WITH SUB-LISTS)))
 (car A)
 (cdr A)
 (car (cdr A))
@@ -25,4 +25,10 @@
  (loop
  (until (null (cdr L)) (car L))
  (setq L (cdr L))))
+(de append (A B) (cond
+   ((null A) B)
+   (T (cons (car A) (append (cdr A) B)))))
+(append '(p q) '(r s ))
+; page 167
+
 
