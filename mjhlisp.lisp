@@ -14,4 +14,15 @@
 ; page 28
 (setq N 3)
 (setq N (plus N N 7))
+(minus (plus 3 7 ))
+(difference  (plus 2 3 ) (plus 1 4))
+(de f (n)
+  (cond ((eq n 0) 1)
+        (T (* n (f (1- n))))
+  )
+)
+(de last (L)
+ (loop
+ (until (null (cdr L)) (car L))
+ (setq L (cdr L))))
 
