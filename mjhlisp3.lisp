@@ -36,8 +36,10 @@
 (setq l '(3 4 5) )
 (mapc '(lambda (n) (plus n 1)) l)
 (mapc '(lambda (n) (plus n 1)) '( 2 3 4))
-(map print (mapc '(lambda (n) (plus n 1)) '( 2 3 4)))
+(map print (mapc '(lambda (n) (times n n)) '( 1 2 3 4 5 6 )))
+(map print (mapc '(lambda (n) (times n n)) (ints 1 10)))  ; print sq s of integers
 ;
-
+(map print (mapc '(lambda (n) (times n n)) l))
+; operation working well on numbers - now create an example with words aka strings
 
 
