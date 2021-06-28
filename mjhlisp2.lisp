@@ -25,4 +25,5 @@
 )
 (ints 1 10)
 (try junk 25)
+; eof - include when copying to force nl
 

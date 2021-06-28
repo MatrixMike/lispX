@@ -32,9 +32,12 @@
    ((null l) nil)
 (t  (cons (fn (car l))
    (mapc fn (cdr l ))))))
+;good from here
 (setq l '(3 4 5) )
 (mapc '(lambda (n) (plus n 1)) l)
 (mapc '(lambda (n) (plus n 1)) '( 2 3 4))
-(map print (mapc '(lambda (n) (plus n 1)) '( 2 3 4))
-)
+(map print (mapc '(lambda (n) (plus n 1)) '( 2 3 4)))
+;
+
+
 
