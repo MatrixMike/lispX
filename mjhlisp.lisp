@@ -1,7 +1,7 @@
 ; samples to check the emulation from the BCPL cintcode
 ; 27 June 2021
 (assoc 'B '((A . 1)(B . 2) (C . 3)))
-(setq A '(A (LIST) (WITH SUB-LISTS)))
+(setq A '(A (LIST) (WITH SUB-LISTS)))  ; note use of hyphen
 (car A)
 (cdr A)
 (car (cdr A))
