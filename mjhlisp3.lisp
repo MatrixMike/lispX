@@ -1,3 +1,21 @@
+; map is copied from original mr file
+(de map (f xs)
+   (cond ((atom xs) xs)
+         (T (cons (f (car xs)) (map f (cdr xs))))
+   )
+)
+
+
+
+
+
+
+
+
+
+
+
+
 (setq colours '(red white blue))
 (setq colours2 '(cyan magenta yellow))
 
@@ -28,10 +46,11 @@
 
 ; good down to here
 
-(de mapc (fn l) (cond
-   ((null l) nil)
-(t  (cons (fn (car l))
-   (mapc fn (cdr l ))))))
+; xxxx   the following xxxx lines need some attention - faulty t 
+; xxxx(de mapc (fn l) (cond
+; xxxx   ((null l) nil)
+; xxxx(t  (cons (fn (car l))
+; xxxx   (mapc fn (cdr l ))))))
 ;good from here
 (setq l '(3 4 5) )
 (mapc '(lambda (n) (plus n 1)) l)
